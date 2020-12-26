@@ -99,9 +99,9 @@
             // cmbBox_Player
             // 
             this.cmbBox_Player.FormattingEnabled = true;
-            this.cmbBox_Player.Location = new System.Drawing.Point(48, 16);
+            this.cmbBox_Player.Location = new System.Drawing.Point(76, 19);
             this.cmbBox_Player.Name = "cmbBox_Player";
-            this.cmbBox_Player.Size = new System.Drawing.Size(121, 21);
+            this.cmbBox_Player.Size = new System.Drawing.Size(170, 21);
             this.cmbBox_Player.TabIndex = 1;
             this.cmbBox_Player.SelectedIndexChanged += new System.EventHandler(this.cmbBox_Player_SelectedIndexChanged);
             // 
