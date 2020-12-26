@@ -5,3 +5,5 @@ Tool to create IEGS2013 teams, it generates a gecko code. You can also save and 
 You can find template teams in the **Teams** subdirectory.
 
 Huge thanks to AS for his help on documenting the player codes.
+
+**Please** don't read the source code as I'm very bad at coding, and it's my first time coding in C#
