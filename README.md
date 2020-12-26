@@ -6,4 +6,4 @@ You can find template teams in the **Teams** subdirectory.
 
 Huge thanks to AS for his help on documenting the player codes.
 
-**Please** don't read the source code as I'm very bad at coding, and it's my first time coding in C#
+**Please** do not read the source code as I'm very bad at coding, and it's my first time coding in C#
