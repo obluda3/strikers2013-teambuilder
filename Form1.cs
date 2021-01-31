@@ -327,5 +327,38 @@ namespace StrikersPlayerGenerator
             
         }
 
+        private void btn_Random_Click(object sender, EventArgs e)
+        {
+            enableEverything();
+            team.playerList = new List<Player>();
+            listBox1.Items.Clear();
+            Random rand = new Random();
+
+            for (var i = 0; i < 16; i++) {
+                Player newPlayer = new Player();
+                team.playerList.Add(newPlayer);
+
+                
+                var index = rand.Next(0, Database.playerNames.Length - 1);
+                var unused = new int[] { 195,196,197,198,199,200,201,202,203,278,279,280,281,282,283,204,205,206,207,267,268,269,271,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,349,361,392,397,398,404,405,406,407,408,409,410,411};
+                while (unused.Contains<int>(index)) { index = rand.Next(0, Database.playerNames.Length - 1); }
+
+                team.playerList[i].updatePlayer(index);
+                listBox1.Items.Add(team.playerList[i].playerName);
+
+            }
+
+            var wearIndex = rand.Next(0, Database.wearNames.Length - 1);
+            var emblemIndex = rand.Next(0, Database.emblemNames.Length - 1);
+
+
+            team.teamWear.updateWear(wearIndex);
+            team.teamEmblem.updateEmblem(emblemIndex);
+
+            cmb_TeamEmblem.SelectedIndex = emblemIndex;
+            cmb_TeamWear.SelectedIndex = wearIndex;
+
+
+        }
     }
 }

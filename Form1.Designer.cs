@@ -56,6 +56,7 @@
             this.tStripMenuItem_Open = new System.Windows.Forms.ToolStripMenuItem();
             this.tStripMenuItem_Save = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btn_Random = new System.Windows.Forms.Button();
             this.tab_Player.SuspendLayout();
             this.tabPage_Info.SuspendLayout();
             this.tab_Team.SuspendLayout();
@@ -99,7 +100,7 @@
             // cmbBox_Player
             // 
             this.cmbBox_Player.FormattingEnabled = true;
-            this.cmbBox_Player.Location = new System.Drawing.Point(76, 19);
+            this.cmbBox_Player.Location = new System.Drawing.Point(79, 6);
             this.cmbBox_Player.Name = "cmbBox_Player";
             this.cmbBox_Player.Size = new System.Drawing.Size(170, 21);
             this.cmbBox_Player.TabIndex = 1;
@@ -108,7 +109,7 @@
             // label_Player
             // 
             this.label_Player.AutoSize = true;
-            this.label_Player.Location = new System.Drawing.Point(6, 19);
+            this.label_Player.Location = new System.Drawing.Point(7, 9);
             this.label_Player.Name = "label_Player";
             this.label_Player.Size = new System.Drawing.Size(36, 13);
             this.label_Player.TabIndex = 0;
@@ -326,11 +327,22 @@
             // 
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
+            // btn_Random
+            // 
+            this.btn_Random.Location = new System.Drawing.Point(380, 459);
+            this.btn_Random.Name = "btn_Random";
+            this.btn_Random.Size = new System.Drawing.Size(75, 23);
+            this.btn_Random.TabIndex = 8;
+            this.btn_Random.Text = "Random";
+            this.btn_Random.UseVisualStyleBackColor = true;
+            this.btn_Random.Click += new System.EventHandler(this.btn_Random_Click);
+            // 
             // form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(540, 494);
+            this.Controls.Add(this.btn_Random);
             this.Controls.Add(this.tab_Team);
             this.Controls.Add(this.btn_Remove);
             this.Controls.Add(this.btn_Add);
@@ -385,6 +397,7 @@
         private System.Windows.Forms.ToolStripMenuItem tStripMenuItem_Open;
         private System.Windows.Forms.ToolStripMenuItem tStripMenuItem_Save;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button btn_Random;
     }
 }
 

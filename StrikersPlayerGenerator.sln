@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrikersPlayerGenerator", "StrikersPlayerGenerator.csproj", "{BF81C9D4-CAC2-48C9-9367-326F88B7A0FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF81C9D4-CAC2-48C9-9367-326F88B7A0FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF81C9D4-CAC2-48C9-9367-326F88B7A0FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF81C9D4-CAC2-48C9-9367-326F88B7A0FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF81C9D4-CAC2-48C9-9367-326F88B7A0FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F57522A3-9193-456F-8FAA-D3BE71D9B42A}
+	EndGlobalSection
+EndGlobal
