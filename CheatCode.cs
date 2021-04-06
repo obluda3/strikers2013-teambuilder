@@ -8,6 +8,9 @@ namespace StrikersPlayerGenerator
 {
     class CheatCode
     {
+        
+
+
         public string[] TeamNameCode(string teamname)
         {
             string[] hexString = new String[3];

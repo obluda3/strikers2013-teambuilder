@@ -17,101 +17,13 @@ namespace StrikersPlayerGenerator
     public partial class form1 : Form
     {
         InazumaTeam team = new InazumaTeam();
+        string languageFile;
         public form1()
         {
             InitializeComponent();
             
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_Player_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_TP_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_Kick_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_Body_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_Control_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_Guard_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_Speed_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_Catch_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
@@ -355,6 +267,76 @@ namespace StrikersPlayerGenerator
             cmb_TeamWear.SelectedIndex = wearIndex;
 
 
+        }
+
+        private void englishToolStripMenuItem_Click(object sender, EventArgs e)
+        { 
+            languageFile = "StrikersPlayerGenerator.languages.English.txt";
+            englishToolStripMenuItem.Checked = true;
+            frenchToolStripMenuItem.Checked = false;
+            germanToolStripMenuItem.Checked = false;
+            updateText();
+        }
+
+        private void frenchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            languageFile = "StrikersPlayerGenerator.languages.French.txt";
+            frenchToolStripMenuItem.Checked = true;
+            englishToolStripMenuItem.Checked = false;
+            germanToolStripMenuItem.Checked = false;
+            updateText();
+        }
+
+        private void germanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            languageFile = "StrikersPlayerGenerator.languages.German.txt";
+            frenchToolStripMenuItem.Checked = false;
+            englishToolStripMenuItem.Checked = false;
+            germanToolStripMenuItem.Checked = true;
+            updateText();
+        }
+
+        private void updateText() 
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            string[] programText;
+
+            // Gets the names of the moves
+            using (var file = assembly.GetManifestResourceStream(languageFile))
+            {
+                using (StreamReader sr = new StreamReader(file))
+                {
+                    var programTextList = new List<string>();
+                    string line;
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        programTextList.Add(line);
+                    }
+
+                    programText = programTextList.ToArray();
+                }
+            }
+
+            tStripMenuItem_Team.Text = programText[1];
+            tStripMenuItem_New.Text = programText[2];
+            tStripMenuItem_Open.Text = programText[3];
+            tStripMenuItem_Save.Text = programText[4];
+            languageToolStripMenuItem.Text = programText[5];
+            frenchToolStripMenuItem.Text = programText[6];
+            englishToolStripMenuItem.Text = programText[7];
+            germanToolStripMenuItem.Text = programText[8];
+            btn_Add.Text = programText[10];
+            btn_Remove.Text = programText[11];
+            btn_Generate.Text = programText[12];
+            tabPage_Info.Text = programText[13];
+            label_Player.Text = programText[14];
+            tabPage1.Text = programText[15];
+            label_TeamName.Text = programText[16];
+            label_TeamEmblem.Text = programText[17];
+            label_TeamWear.Text = programText[18];
+            label_TeamAuthor.Text = programText[19];
+            label1.Text = programText[20];
+            btn_Random.Text = programText[21];
         }
     }
 }

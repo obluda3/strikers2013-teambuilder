@@ -116,5 +116,13 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="languages\English.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="languages\French.txt" />
+    <EmbeddedResource Include="languages\German.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
